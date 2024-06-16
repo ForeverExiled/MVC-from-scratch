@@ -28,6 +28,8 @@ function main() {
         while (++$start < count($parameters)) {
             $args[] = $parameters[$start];
         }
+
+        call_user_func_array([new $controller_name, $function_name], $args);
     }    
 }
 
