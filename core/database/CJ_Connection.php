@@ -1,6 +1,8 @@
 <?php
 class CJ_Connection
 {
+    private $db_params;
+    
     function __construct() {
         require 'config/database.php';
         $this->db_params = $db_params;

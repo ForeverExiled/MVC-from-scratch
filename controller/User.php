@@ -4,6 +4,8 @@ require 'model/UserModel.php';
 
 class User extends CJ_Controller
 {
+    private $model;
+    
     function __construct() {
         echo 'user controller CLASS CREATED <br>';
         $this->model = new UserModel();

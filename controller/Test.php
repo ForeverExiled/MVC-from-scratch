@@ -4,6 +4,8 @@ require 'model/Test.php';
 
 class Test extends CJ_Controller
 {
+    private $test_model;
+    
     function __construct() {
         echo 'CLASS CREATED.'.'<br>';
 
