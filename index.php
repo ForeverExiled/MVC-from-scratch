@@ -11,6 +11,7 @@ function get_argument_start($uri) {
 }
 
 function main() {
+    $uri = parse_url($_SERVER['REQUEST_URI']);
     $parameters = explode('/', $uri['path']);
     $start = get_argument_start($parameters);
 

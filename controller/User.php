@@ -16,7 +16,7 @@ class User extends CJ_Controller
     }
 
     function all_get() {
-        $result = $this->model->get_all();
+        $result = $this->model->all();
         print_r($result);
         echo json_encode($result);
     }
