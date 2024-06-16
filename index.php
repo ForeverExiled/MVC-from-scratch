@@ -9,3 +9,26 @@ function get_argument_start($uri) {
         }
     }
 }
+
+function main() {
+    $parameters = explode('/', $uri['path']);
+    $start = get_argument_start($parameters);
+
+    if ($start == -1) {
+        echo '404 not found';
+    }
+    else {
+        $controller_name = $parameters[$start];
+        $function_name = $parameters[$start + 1];
+
+        $args = [];
+
+        $start++;
+
+        while (++$start < count($parameters)) {
+            $args[] = $parameters[$start];
+        }
+    }    
+}
+
+main();
