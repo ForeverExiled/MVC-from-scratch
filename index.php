@@ -19,7 +19,7 @@ function main() {
     }
     else {
         $controller_name = $parameters[$start];
-        $function_name = $parameters[$start + 1];
+        $function_name = $parameters[$start + 1].'_'.strtolower($_SERVER['REQUEST_METHOD']);
 
         $args = [];
 
