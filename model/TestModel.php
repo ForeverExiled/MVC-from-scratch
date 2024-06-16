@@ -1,7 +1,7 @@
 <?php
 require 'core/CJ_Model.php';
 
-class Test extends CJ_Model
+class TestModel extends CJ_Model
 {
     function __construct() {
         parent::__construct();

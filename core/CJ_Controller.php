@@ -6,6 +6,9 @@ class CJ_Controller
     }
 
     function load_view($view, $args) {
-        
+        foreach ($args as $name => $value) {
+            $$name = $value;
+        }
+        require 'view/'.$view.'.php';
     }
 }
